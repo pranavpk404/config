@@ -1,0 +1,6 @@
+sudo pacman -Syu pavucontrol alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gnome-keyring gvfs-mtp htop mousepad mtpfs nemo nodejs npm noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S visual-studio-code-bin brave-bin
