@@ -2,8 +2,10 @@ from os import system
 
 # Programs
 system("pacman -Syu pavucontrol alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gnome-keyring gvfs-mtp htop mousepad mtpfs nemo nodejs npm noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
-system("git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si")
-system("yay -S visual-studio-code-bin brave-bin")
+system("git clone https://aur.archlinux.org/yay.git")
+system("cd yay")
+system("makepkg -si")
+system("yay -S visual-studio-code-bin brave-bin pfetch")
 print("Programs done")
 
 # Bluetooth and audio 
@@ -39,6 +41,7 @@ elif theme_input == "3":
     theme = "nord"
 
 system(f"cp -r {theme}/* /home/pranav/.config/")
+system("mkdir /home/pranav/.local/share/fonts")
 system("cp -r fonts/* /home/pranav/.local/share/fonts")
 print("config done")
 
