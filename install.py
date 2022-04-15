@@ -6,6 +6,7 @@ system("git clone https://aur.archlinux.org/yay.git")
 system("cd yay")
 system("makepkg -si")
 system("yay -S visual-studio-code-bin brave-bin pfetch")
+system("pacman -Rns paru amd-ucode neofetch bash-completion betterlockscreen kitty picom")
 print("Programs done")
 
 # Bluetooth and audio 
