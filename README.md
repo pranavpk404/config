@@ -2,7 +2,6 @@
 
 I have found this https://sourceforge.net/projects/arch-linux-gui/files/ it install arch linux with GUI my install.py is specifically made to tune that system
 
-
 # Catppuccin
 Wallpaper:https://github.com/catppuccin/wallpapers
 GTK:https://github.com/catppuccin/gtk
