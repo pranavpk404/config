@@ -1,4 +1,4 @@
-# My configs for Arch Linux
+# config
 
 I have found this https://sourceforge.net/projects/arch-linux-gui/files/ it install arch linux with GUI my install.py is specifically made to tune that system
 
