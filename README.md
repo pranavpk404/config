@@ -9,6 +9,13 @@ GTK:https://github.com/catppuccin/gtk
 
 Icons:https://www.xfce-look.org/p/1715570/
 
+# Rose Pine
+Wallpaper:
+
+GTK:https://github.com/rose-pine/gtk
+
+Icons:https://github.com/rose-pine/gtk
+
 # Nord
 Wallpaper:https://github.com/midnitefox/Nord-Theme-Ports-and-Assets
 
@@ -22,3 +29,4 @@ Wallpaper:https://gitlab.com/exorcist365/wallpapers/
 GTK:https://www.gnome-look.org/p/1681313
 
 Icons:https://www.gnome-look.org/p/1681460
+
