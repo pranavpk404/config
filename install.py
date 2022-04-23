@@ -1,7 +1,7 @@
 from os import system
 
 # Programs
-system("pacman -Syu pavucontrol alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mousepad mtpfs nemo nodejs npm noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
+system("pacman -Syu pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mousepad mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
 system("git clone https://aur.archlinux.org/yay.git")
 system("cd yay")
 system("makepkg -si")
@@ -40,6 +40,9 @@ elif theme_input == "2":
     theme = "gruvbox"
 elif theme_input == "3":
     theme = "nord"
+elif theme_input == "4":
+    theme = "rose_pine"
+
 
 system(f"cp -r {theme}/* /home/pranav/.config/")
 system("mkdir /home/pranav/.local/share/fonts")
