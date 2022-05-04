@@ -2,7 +2,7 @@ from os import system
 system("git clone https://aur.archlinux.org/yay.git")
 system("cd yay")
 system("makepkg -si")
-system("yay -S visual-studio-code-bin brave-bin pfetch")
+system("yay -S visual-studio-code-bin brave-bin pfetch mongodb mongodb-tools mongodb-compass protonvpn")
 
 # ZSH
 system("sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"")
