@@ -1,8 +1,8 @@
 from os import system
-system("git clone https://aur.archlinux.org/yay.git")
-system("cd yay")
-system("makepkg -si")
-system("yay -S visual-studio-code-bin brave-bin pfetch mongodb mongodb-tools mongodb-compass protonvpn")
+#system("git clone https://aur.archlinux.org/yay.git")
+#system("cd yay")
+#system("makepkg -si")
+#system("yay -S visual-studio-code-bin brave-bin pfetch mongodb mongodb-tools mongodb-compass protonvpn")
 
 # Fish
 system("""
