@@ -4,10 +4,14 @@ system("cd yay")
 system("makepkg -si")
 system("yay -S visual-studio-code-bin brave-bin pfetch mongodb mongodb-tools mongodb-compass protonvpn")
 
-# ZSH
-system("sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"")
-system("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k")
-system("cp -r $(pwd)/zsh/* ~/")
+# Fish
+system("""
+set -l _tide_tmp_dir (command mktemp -d)
+curl https://codeload.github.com/ilancosman/tide/tar.gz/v5 | tar -xzC $_tide_tmp_dir
+command cp -R $_tide_tmp_dir/*/{completions,conf.d,functions} $__fish_config_dir
+exec fish --init-command "set -g fish_greeting; emit _tide_init_install"
+""")
+system("cp -r fish/ ~/config/")
 
 # Config
 theme_input = input("For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 \n")
