@@ -1,7 +1,7 @@
 from os import system
 
 # Programs
-system("pacman -Syu fish qbittorrent pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh  flameshot gvfs-mtp btop mousepad mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
+system("pacman -Syu fish zsh pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh  flameshot gvfs-mtp btop mousepad mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
 system("pacman -Rns paru amd-ucode neofetch bash-completion betterlockscreen kitty picom")
 print("Programs done")
 
