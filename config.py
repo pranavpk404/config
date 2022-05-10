@@ -13,7 +13,7 @@ exec fish --init-command "set -g fish_greeting; emit _tide_init_install"
 """)
 
 # Config
-theme_input = input("For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 \n")
+theme_input = input("For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 | For Ayu:6\n")
 
 if theme_input == "1":
     theme = "catppuccin"
@@ -25,7 +25,8 @@ elif theme_input == "4":
     theme = "rose_pine"
 elif theme_input == "5":
     theme = "dracula"
-
+elif theme_input == "6":
+    theme = "ayu"
 
 system(f"cp -r {theme}/* /home/pranav/.config/")
 system("mkdir /home/pranav/.local/share/fonts")
