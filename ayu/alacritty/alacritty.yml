@@ -1,0 +1,43 @@
+colors:
+  primary:
+    background: "#0d1017"
+    foreground: "#f8f8f2"
+    bright_foreground: "#ffffff"
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: "#44475a"
+      background: "#50fa7b"
+    focused_match:
+      foreground: "#44475a"
+      background: "#ffb86c"
+    bar:
+      background: "#282a36"
+      foreground: "#f8f8f2"
+  hints:
+    start:
+      foreground: "#282a36"
+      background: "#f1fa8c"
+    end:
+      foreground: "#f1fa8c"
+      background: "#282a36"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: "#44475a"
+  normal:
+    black: "#21222c"
+    red: "#F26D78"
+    green: "#7FD962"
+    cpu_color: "#FFB454"
+    blue: "#39BAE6"
+    magenta: "#F07178"
+cursor:
+  style: Beam
