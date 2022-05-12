@@ -4,13 +4,6 @@ system("cd yay")
 system("makepkg -si")
 system("yay -S visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongodb-compass")
 
-# Fish
-system("""
-set -l _tide_tmp_dir (command mktemp -d)
-curl https://codeload.github.com/ilancosman/tide/tar.gz/v5 | tar -xzC $_tide_tmp_dir
-command cp -R $_tide_tmp_dir/*/{completions,conf.d,functions} $__fish_config_dir
-exec fish --init-command "set -g fish_greeting; emit _tide_init_install"
-""")
 
 # Config
 theme_input = input("For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 | For Ayu:6\n")
@@ -31,4 +24,5 @@ elif theme_input == "6":
 system(f"cp -r {theme}/* /home/pranav/.config/")
 system("mkdir /home/pranav/.local/share/fonts")
 system("cp -r fonts/* /home/pranav/.local/share/fonts")
+system(""cp -r fish/ /home/pranav/.config)
 print("config done")
