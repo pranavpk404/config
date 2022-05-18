@@ -2,7 +2,7 @@ from os import system
 system("git clone https://aur.archlinux.org/yay.git")
 system("cd yay")
 system("makepkg -si")
-system("yay -S visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongodb-compass")
+system("yay -S visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
 
 
 # Config
