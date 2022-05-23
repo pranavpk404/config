@@ -1,4 +1,5 @@
 from os import system
+
 system("git clone https://aur.archlinux.org/yay.git")
 system("cd yay")
 system("makepkg -si")
@@ -24,5 +25,5 @@ elif theme_input == "6":
 system(f"cp -r {theme}/* /home/pranav/.config/")
 system("mkdir /home/pranav/.local/share/fonts")
 system("cp -r fonts/* /home/pranav/.local/share/fonts")
-system(""cp -r fish/ /home/pranav/.config)
+system("cp -r fish/ /home/pranav/.config")
 print("config done")
