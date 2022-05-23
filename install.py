@@ -1,11 +1,9 @@
 from os import system
 
 # Programs
-system("pacman -Syu typescript fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh  flameshot gvfs-mtp btop mousepad mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
-system("pacman -Rns paru amd-ucode neofetch bash-completion betterlockscreen kitty picom")
+system("pacman -Syu typescript neovim fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh  flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
+system("pacman -Rns paru vim amd-ucode neofetch bash-completion betterlockscreen kitty picom")
 print("Programs done")
-
-
 
 
 # Bluetooth and audio
