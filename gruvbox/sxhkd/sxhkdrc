@@ -6,7 +6,7 @@ super + n
 super + v
 	code
 super + b
-	firefox
+	brave
 super + z
 	telegram-desktop
 
