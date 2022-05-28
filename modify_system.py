@@ -43,6 +43,18 @@ system("systemctl pulseaudio start")
 print("Bluetooth and audio done")
 
 
-install_and_remove()
-edit_fstab()
-create_swap()
+user_input = input("For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
+
+
+if user_input == "1":
+    install_and_remove()
+elif user_input == "2":
+    edit_fstab()
+elif user_input == "3":
+    create_swap()
+elif user_input == "4":
+    install_and_remove()
+    edit_fstab()
+    create_swap()
+else:
+    print("Wrong input")
