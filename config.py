@@ -14,7 +14,7 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S  visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
+    system("yay -S visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
 
 
 def config_system():
@@ -70,16 +70,8 @@ def shell():
         print("fish done")
 
 
-def neovim():
-    system("cp -r global/neovim ~/.config")
-    system("git clone https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim")
-    system("git clone https://github.com/github/copilot.vim.git \
-  ~/.config/nvim/pack/github/start/copilot.vim")
-
-
 user_input = input(
-    "For Aur Programs:1 | For config:2 | For shell:3 | For Everything:4\n")
+    "For Aur Programs:1 | For config:2 | For shell:3 | For Everything:4 \n")
 
 if user_input == "1":
     install_aur_programs()
@@ -91,6 +83,5 @@ elif user_input == "4":
     install_aur_programs()
     config_system()
     shell()
-
 else:
     print("Please enter correct option")
