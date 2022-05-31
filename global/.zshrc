@@ -2,9 +2,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-
 plugins=(git fast-syntax-highlighting zsh-autosuggestions)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -22,4 +19,3 @@ alias cnat="npx create-next-app@latest --ts"
 alias tailwind="npm install -D tailwindcss postcss autoprefixer && npx tailwindcss init -p"
 alias btopu="btop --utf-force"
 alias update="yay"
-alias ctblue="bluetoothctl power on && bluetoothctl connect 11:11:22:AC:8D:70"

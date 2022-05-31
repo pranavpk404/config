@@ -1,12 +1,10 @@
-
 from os import system
 
 # Programs
 
 
-def install_and_remove():
-    system("pacman -Syu typescript fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs-lts-gallium npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
-    system("pacman -Rns paru vim amd-ucode neofetch bash-completion betterlockscreen kitty picom")
+def install():
+    system("pacman -Syu typescript fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
     print("Programs done")
 
 # Fstab
@@ -41,27 +39,18 @@ def create_swap():
     print("Swap memory Done")
 
 
-def neovim():
-    system("sudo pacman -S neovim lua-language-server pyright")
-    system("npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim graphql-language-service-cli graphql-language-service-server prettier")
-    print("You Also need to run config.py and select neovim to complete")
-
-
 user_input = input(
-    "For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Neovim:4 | For Everything:5\n")
+    "For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
 
 if user_input == "1":
-    install_and_remove()
+    install()
 elif user_input == "2":
     edit_fstab()
 elif user_input == "3":
     create_swap()
 elif user_input == "4":
-    neovim()
-elif user_input == "5":
-    install_and_remove()
+    install()
     edit_fstab()
     create_swap()
-    neovim()
 else:
     print("Wrong input")
