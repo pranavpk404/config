@@ -2,15 +2,19 @@
 from os import system
 
 # Programs
+
+
 def install_and_remove():
-    system("pacman -Syu typescript neovim fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
+    system("pacman -Syu typescript fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs-lts-gallium npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc ttf-fira-code git base-devel")
     system("pacman -Rns paru vim amd-ucode neofetch bash-completion betterlockscreen kitty picom")
     print("Programs done")
 
 # Fstab
-def edit_fstab ():
+
+
+def edit_fstab():
     system("mkdir /code /films /important /tutorials /misc")
-    with open ("/etc/fstab","a") as fstab:
+    with open("/etc/fstab", "a") as fstab:
         fstab.write(
             """
     UUID=adc2ff84-d990-4297-a2b3-045d06d35764 /code ext4 defaults,noatime 0 1
@@ -37,14 +41,14 @@ def create_swap():
     print("Swap memory Done")
 
 
-system("systemctl start bluetooth.service")
-system("systemctl enable bluetooth.service")
-system("systemctl pulseaudio start")
-print("Bluetooth and audio done")
+def neovim():
+    system("sudo pacman -S neovim lua-language-server pyright")
+    system("npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim graphql-language-service-cli graphql-language-service-server prettier")
+    print("You Also need to run config.py and select neovim to complete")
 
 
-user_input = input("For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
-
+user_input = input(
+    "For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Neovim:4 | For Everything:5\n")
 
 if user_input == "1":
     install_and_remove()
@@ -53,8 +57,11 @@ elif user_input == "2":
 elif user_input == "3":
     create_swap()
 elif user_input == "4":
+    neovim()
+elif user_input == "5":
     install_and_remove()
     edit_fstab()
     create_swap()
+    neovim()
 else:
     print("Wrong input")

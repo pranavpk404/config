@@ -54,8 +54,8 @@ GTK:https://github.com/mrbrownstone07/Mayu_dark_gtk_theme
 
 Icons:https://github.com/dracula/gtk/files/5214870/Dracula.zip
 
+
 # TODO
 
-need to stop coping and pasting sxhkd folder
 need to rerun the script with below line commented to install zsh-plugins it is a known bug
 #system("sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"")
