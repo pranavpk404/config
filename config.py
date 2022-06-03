@@ -14,7 +14,7 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S visual-studio-code-bin brave-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
+    system("yay -S visual-studio-code-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
 
 
 def config_system():
@@ -40,7 +40,7 @@ def config_system():
     system(f"cp -r themes/{theme}/* $HOME/.config/")
     system(f"cp -r themes/{theme}/{theme}.rasi $HOME/")
     system("mkdir $HOME/.local/share/fonts")
-    system("cp -r fonts/* $HOME/.local/share/fonts")
+    system("cp -r global/fonts/* $HOME/.local/share/fonts")
 
     # Wallpaper
     print("Please wait while we download the wallpaper")
