@@ -1,4 +1,4 @@
-## Run modify_system.py and neovim.py as sudo and config.py as normal
+## Run modify_system.py as sudo and config.py as normal
 
 # Themes
 
