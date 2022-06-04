@@ -34,7 +34,8 @@ def config_system():
         theme = "ayu"
     else:
         theme = "ayu"
-
+     
+    system("cp -r global/nvim .config/nvim")
     system("cp -r global/bspwm ~/.config/")
     system("cp -r global/i3 ~/.config/")
     system(f"cp -r themes/{theme}/* $HOME/.config/")
