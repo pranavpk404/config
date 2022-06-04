@@ -1,12 +1,34 @@
-abbr -a -g cdrp cd /code/projects/react
-abbr -a -g cdnp cd /code/projects/nextjs
-abbr -a -g cdpp cd /code/projects/python/
+function cdrp
+    cd /code/projects/react
+end
 
-abbr -a -g rop sudo pacman -Rns $(pacman -Qtdq)
-abbr -a -g server yarn run dev
-abbr -a -g startmongo systemctl start --now mongodb
-abbr -a -g open xdg-open
-abbr -a -g btopu btop --utf-force
+function cdnp
+    cd /code/projects/nextjs
+end
+
+function cdpp
+    cd /code/projects/python
+end
+
+function cdjp
+    cd /code/projects/js
+end
+
+function rop
+    sudo pacman -Rns $(pacman -Qtdq)
+end
+
+function server
+    npm run dev
+end
+
+function startmongo
+    systemctl start --now mongodb
+end
+
+function open
+    xdg-open
+end
 
 function cnat
     npx create-next-app@latest --ts
@@ -15,9 +37,16 @@ end
 function tailwind
     npm install -D tailwindcss postcss autoprefixer && npx tailwindcss init -p
 end
-function captoesc
-	setxkbmap -option caps:escape
+
+
+function btopu
+    btop --utf-force
 end
-function resetkeymap
-	setxkbmap -option
-end	
+
+function capstoesc
+    setxkbmap -option caps:escape
+end
+
+function resetkey
+    setxkbmap -option
+end
