@@ -14,7 +14,7 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S visual-studio-code-bin pfetch mongodb-bin mongodb-tools-bin mongosh-bin mongodb-compass")
+    system("yay -S visual-studio-code-bin pfetch")
 
 
 def config_system():
@@ -52,7 +52,7 @@ def config_system():
 def shell():
     zsh_or_fish = input("For zsh:1 | For fish:2\n")
     if zsh_or_fish == "1":
-        print("You will need to rerun the script with below line commented to install zsh-plugins it is a known bug")
+        print("You will need to rerun the script with line 56 commented to install zsh-plugins it is a known bug")
         system(
             "sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"")
         system("cp -r global/.zshrc $HOME/")
