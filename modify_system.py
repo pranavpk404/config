@@ -1,12 +1,16 @@
 from os import system
 
 # Programs
-def install():
+def install():  
     system("pacman -Syu fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
     print("Programs done")
 
 # Fstab
-
+# Bluetooth and audio
+system("systemctl start bluetooth.service")
+system("systemctl enable bluetooth.service")
+system("systemctl pulseaudio start")
+print("Bluetooth and audio done")
 
 def edit_fstab():
     system("mkdir /code /films /important /tutorials /misc")
@@ -21,7 +25,7 @@ def edit_fstab():
             """
         )
     system("mount -a")
-    print("fstab done")
+    print("fstab done")``
 
 
 # Swap memory
