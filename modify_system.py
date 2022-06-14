@@ -25,7 +25,7 @@ def edit_fstab():
             """
         )
     system("mount -a")
-    print("fstab done")``
+    print("fstab done")
 
 
 # Swap memory
