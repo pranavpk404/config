@@ -4,13 +4,9 @@ from os import system
 def install():  
     system("pacman -Syu fish pavucontrol alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
     print("Programs done")
-
-# Fstab
-# Bluetooth and audio
-system("systemctl start bluetooth.service")
-system("systemctl enable bluetooth.service")
-system("systemctl pulseaudio start")
-print("Bluetooth and audio done")
+    system("systemctl start bluetooth.service")
+    system("systemctl enable bluetooth.service")
+    system("systemctl pulseaudio start")
 
 def edit_fstab():
     system("mkdir /code /films /important /tutorials /misc")
@@ -41,6 +37,10 @@ def create_swap():
     print("Swap memory Done")
 
 
+def setup_hibernate():
+    system("sudo sh hibernator")
+    system("sudo grub-mkconfig -o /boot/grub/grub.cfg")
+
 user_input = input(
     "For Install and Remove:1 | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
 
@@ -51,8 +51,11 @@ elif user_input == "2":
 elif user_input == "3":
     create_swap()
 elif user_input == "4":
+    setup_hibernate()
+elif user_input == "5":
     install()
     edit_fstab()
     create_swap()
+    setup_hibernate()
 else:
     print("Wrong input")
