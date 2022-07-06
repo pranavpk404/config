@@ -6,7 +6,7 @@ super + n
 super + v
 	code
 super + b
-	brave
+	firefox
 super + z
 	telegram-desktop
 
@@ -19,10 +19,10 @@ super+F2:
 super+F3:
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
 
-super+F4:
-	python /home/pranav/.config/sxhkd/bluetooth_connect.py
-
 super+F5:
+	bluetoothctl power on && bluetoothctl  connect 11:11:22:AC:8D:70
+
+super+F4:
 	feh --randomize --bg-fill /home/pranav/Pictures/wallpapers*
 
 
