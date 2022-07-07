@@ -14,7 +14,7 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S visual-studio-code-bin pfetch")
+    system("yay -S visual-studio-code-bin pfetch onlyoffice-bin")
 
 
 def config_system():
