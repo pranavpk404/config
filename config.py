@@ -35,9 +35,9 @@ def config_system():
     else:
         theme = "ayu"
      
-    system("cp -r global/nvim .config/nvim")
     system("cp -r global/bspwm ~/.config/")
-    system("cp -r global/i3 ~/.config/")
+    system("cp -r global/i3 ~/.config/") 
+    system("cp -r global/flameshot ~/.config/")
     system(f"cp -r themes/{theme}/* $HOME/.config/")
     system(f"cp -r themes/{theme}/{theme}.rasi $HOME/")
     system("mkdir $HOME/.local/share/fonts")
