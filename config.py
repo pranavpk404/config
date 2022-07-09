@@ -14,8 +14,11 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S visual-studio-code-bin pfetch onlyoffice-bin")
+    system("yay -S visual-studio-code-bin python-pywal python-pywalfox onlyoffice-bin")
 
+
+def setup_pywall():
+    system("cp -r pywal/* ~/.config/")
 
 def config_system():
     theme_input = input(
@@ -72,7 +75,7 @@ def shell():
 
 
 user_input = input(
-    "For Aur Programs:1 | For config:2 | For shell:3 | For Everything:4 \n")
+    "For Aur Programs:1 | For config:2 | For shell:3 | For Pywal:4 \n")
 
 if user_input == "1":
     install_aur_programs()
@@ -81,8 +84,6 @@ elif user_input == "2":
 elif user_input == "3":
     shell()
 elif user_input == "4":
-    install_aur_programs()
-    config_system()
-    shell()
+    setup_pywall()
 else:
     print("Please enter correct option")

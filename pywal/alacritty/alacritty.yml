@@ -1,0 +1,46 @@
+cursor:
+  style: Beam
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+  size: 11
+# BEGIN ACE
+colors:
+  primary:
+    background: '#0F0F12'
+    foreground: '#b0bcc9'
+  cursor:
+    text:       '#0F0F12'
+    cursor:     '#b0bcc9'
+  normal:
+    black:      '#0F0F12'
+    red:        '#585B5D'
+    green:      '#48576A'
+    yellow:     '#AA6548'
+    blue:       '#D49B6A'
+    magenta:    '#5A7192'
+    cyan:       '#847D85'
+    white:      '#b0bcc9'
+  bright:
+    black:      '#7b838c'
+    red:        '#585B5D'
+    green:      '#48576A'
+    yellow:     '#AA6548'
+    blue:       '#D49B6A'
+    magenta:    '#5A7192'
+    cyan:       '#847D85'
+    white:      '#b0bcc9'
+# END ACE
