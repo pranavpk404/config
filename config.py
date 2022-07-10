@@ -14,11 +14,18 @@ def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay")
     system("makepkg -si")
-    system("yay -S visual-studio-code-bin python-pywal python-pywalfox onlyoffice-bin")
+    system("yay -S visual-studio-code-bin python-pywalfox onlyoffice-bin")
 
 
 def setup_pywall():
     system("cp -r pywal/* ~/.config/")
+    system("mkdir $HOME/.local/share/fonts")
+    system("cp -r global/fonts/* $HOME/.local/share/fonts")
+    system("cp -r global/bspwm ~/.config/")
+    system("cp -r global/flameshot ~/.config/")
+    system(f"cp -r themes/ayu/ayu.rasi $HOME/")
+
+
 
 def config_system():
     theme_input = input(
@@ -38,13 +45,14 @@ def config_system():
     else:
         theme = "ayu"
      
-    system("cp -r global/bspwm ~/.config/")
-    system("cp -r global/i3 ~/.config/") 
-    system("cp -r global/flameshot ~/.config/")
-    system(f"cp -r themes/{theme}/* $HOME/.config/")
-    system(f"cp -r themes/{theme}/{theme}.rasi $HOME/")
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
+    system("cp -r global/bspwm ~/.config/")
+    
+    system("cp -r global/flameshot ~/.config/")
+    system("cp -r global/i3 ~/.config/") 
+    system(f"cp -r themes/{theme}/* $HOME/.config/")
+    system(f"cp -r themes/{theme}/{theme}.rasi $HOME/")
 
     # Wallpaper
     print("Please wait while we download the wallpaper")
