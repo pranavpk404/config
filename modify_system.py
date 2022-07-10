@@ -2,7 +2,7 @@ from os import system
 
 # Programs
 def install():  
-    system("pacman -Syu fish pavucontrol firefox alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
+    system("pacman -Syu fish pavucontrol python-pywal firefox alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
     print("Programs done")
     system("systemctl start bluetooth.service")
     system("systemctl enable bluetooth.service")
