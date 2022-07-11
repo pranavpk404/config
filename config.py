@@ -20,9 +20,7 @@ def setup_pywall():
     system("cp -r pywal/* ~/.config/")
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
-    system("cp -r global/bspwm ~/.config/")
     system("cp -r global/flameshot ~/.config/")
-    system(f"cp -r pywal/ayu.rasi $HOME/")
     system(f"git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/")
 
 
@@ -94,5 +92,6 @@ elif user_input == "3":
     shell()
 elif user_input == "4":
     setup_pywall()
+
 else:
     print("Please enter correct option")

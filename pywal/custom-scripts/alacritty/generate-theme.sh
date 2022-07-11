@@ -1,15 +1,4 @@
 #!/bin/sh
-# Alacritty Color Export
-# Version 0.1.1
-# github.com/egeesin
-#
-# Exports generated Wal colors to Alacritty config
-# WARNING: Don't forget to backup your Alacritty config
-# before execute this script!
-#
-# Dependencies: grep, sed
-# Usage: ./script.sh
-#        ./script.sh <config yml>
 
 # Function to display error and quit
 die() {
@@ -17,7 +6,7 @@ die() {
   exit 1
 }
 
-DEFAULT_MACOS_CONFIG="$HOME"/.config/alacritty/alacritty.yml
+DEFAULT_CONFIG="$HOME"/.config/alacritty/alacritty.yml
 
 # Wal generates a shell script that defines color0..color15
 SRC="$HOME"/.cache/wal/colors.sh
@@ -37,12 +26,12 @@ if [ -n "$1" ]; then
   }
 else
   # Default config path in Mac systems
-  [ -e "$DEFAULT_MACOS_CONFIG" ] || die "Alacritty config not found, exiting script."
+  [ -e "$DEFAULT_CONFIG" ] || die "Alacritty config not found, exiting script."
 
-  CFG="$DEFAULT_MACOS_CONFIG"
-  [ -L "$DEFAULT_MACOS_CONFIG" ] && {
+  CFG="$DEFAULT_CONFIG"
+  [ -L "$DEFAULT_CONFIG" ] && {
     printf "Following symlink to config...\n"
-    CFG=$($READLINK -f "$DEFAULT_MACOS_CONFIG")
+    CFG=$($READLINK -f "$DEFAULT_CONFIG")
   }
 fi
 
