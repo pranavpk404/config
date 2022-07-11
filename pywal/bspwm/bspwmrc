@@ -5,7 +5,8 @@ sxhkd &
 nm-applet &
 
 bash ~/.config/polybar/scripts/pywal.sh /home/pranav/Pictures/wallpapers/ &&
-bash ~/.config/alacritty/make-theme.sh &&
+bash ~/.config/custom-scripts/alacritty/generate-theme.sh &&
+bash ~/.config/custom-scripts/brave/generate-theme.sh &&
 bash ~/.config/polybar/launch.sh &&
 
 bspc monitor -d I II III IV V
@@ -19,7 +20,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 
-bspc rule -a code desktop="^1"
+bspc rule -a Code desktop="^1"
 bspc rule -a Brave-browser-beta desktop='^2'
 bspc rule -a TelegramDesktop desktop='^3'
 
