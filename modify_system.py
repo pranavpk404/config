@@ -2,7 +2,7 @@ from os import system
 
 # Programs
 def install():  
-    system("pacman -Syu fish pavucontrol python-pywal firefox alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
+    system("pacman -Syu fish pavucontrol python-pywal lightdm-webkit2-greeter lightdm-webkit-theme-litarvan firefox alacritty gnome-keyring pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol telegram-desktop tlp unrar unzip vlc git base-devel")
     print("Programs done")
     system("systemctl start bluetooth.service")
     system("systemctl enable bluetooth.service")
@@ -38,11 +38,11 @@ def create_swap():
 
 
 def setup_hibernate():
-    system("sudo sh hibernator")
+    system("sh ./hibernator")
     system("sudo grub-mkconfig -o /boot/grub/grub.cfg")
 
 user_input = input(
-    "For Installing | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
+    "For Installing | For Edit fstab:2 | For Create Swap:3 | For Hibernation:4 | For Everything:5\n")
 
 if user_input == "1":
     install()

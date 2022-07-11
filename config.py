@@ -6,14 +6,13 @@ wallpaper = {
     "dracula": "https://github.com/dracula/wallpaper/",
     "catppuccin": "https://github.com/catppuccin/wallpapers",
     "rose_pine": "https://github.com/rose-pine/wallpapers",
-    "ayu": "https://github.com/catppuccin/wallpapers"
+    "ayu": "https://github.com/catppuccin/wallpapers",
 }
 
 
 def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
-    system("cd yay")
-    system("makepkg -si")
+    system("cd yay/ && makepkg -si")
     system("yay -S visual-studio-code-bin python-pywalfox onlyoffice-bin")
 
 
@@ -23,7 +22,9 @@ def setup_pywall():
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/bspwm ~/.config/")
     system("cp -r global/flameshot ~/.config/")
-    system(f"cp -r themes/ayu/ayu.rasi $HOME/")
+    system(f"cp -r pywal/ayu.rasi $HOME/")
+    system(f"git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/")
+
 
 
 
