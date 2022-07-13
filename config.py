@@ -13,7 +13,7 @@ wallpaper = {
 def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay/ && makepkg -si")
-    system("yay -S visual-studio-code-bin python-pywalfox onlyoffice-bin")
+    system("yay -S visual-studio-code-bin brave-bin onlyoffice-bin")
 
 
 def setup_pywall():
