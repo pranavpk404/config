@@ -41,8 +41,8 @@ get_fg_color(){
 
 background=$(hexToRgb $background)
 foreground=$(hexToRgb $foreground)
-accent=$(hexToRgb $color8)
-secondary=$(hexToRgb $color3)
+accent=$(hexToRgb $color1)
+secondary=$(hexToRgb $color9)
 
 generate() {
     # Theme template
