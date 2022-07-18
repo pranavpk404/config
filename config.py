@@ -21,7 +21,7 @@ def setup_pywall():
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
-    system(f"git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/")
+    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers")
 
 
 
