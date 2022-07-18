@@ -60,7 +60,7 @@ generate() {
           "frame": [$background],
           "frame_inactive": [$background],
           "toolbar": [$accent],
-          "ntp_text": [$foreground],
+          "ntp_text": [0,0,0],
           "ntp_link": [$accent],
           "ntp_section": [$secondary],
           "button_background": [$foreground],
@@ -80,4 +80,6 @@ EOF
 prepare
 generate
 get_fg_color
+echo "changing brave background image"
+cp -r ~/.config/custom-scripts/brave/theme/images/theme_ntp_background_norepeat.png ~/.config/BraveSoftware/Brave-Browser/Default/sanitized_background_image.png &&
 echo "Pywal Chrome theme generated at $THEME_DIR"
