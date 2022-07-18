@@ -24,10 +24,10 @@ prepare() {
     mkdir $THEME_DIR
     mkdir "$THEME_DIR/images"
     
-    # Copy wallpaper so it can be used in theme  
+    # Copy wallpaper so it can be used in theme
     background_image="images/theme_ntp_background_norepeat.png"
     cp "$wallpaper" "$THEME_DIR/$background_image"
-
+    
 }
 get_fg_color(){
     INTENSITY=$(calc "$R*0.299 + $G*0.587 + $B*0.114")
@@ -41,8 +41,9 @@ get_fg_color(){
 
 background=$(hexToRgb $background)
 foreground=$(hexToRgb $foreground)
-accent=$(hexToRgb $color1)
-secondary=$(hexToRgb $color9)
+accent=$(hexToRgb $color9)
+secondary=$(hexToRgb $color3)
+
 
 generate() {
     # Theme template

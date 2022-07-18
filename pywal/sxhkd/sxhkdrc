@@ -4,9 +4,9 @@ super + Return
 super + n
 	nemo
 super + v
-	code
+	nvim
 super + b
-	brave
+        firefox
 super + z
 	telegram-desktop
 
@@ -23,8 +23,7 @@ super+F5:
 	bluetoothctl power on && bluetoothctl  connect 11:11:22:AC:8D:70
 
 super+F4:
-	feh --randomize --bg-fill $HOME/Pictures/wallpapers*
-
+         bash ~/.config/custom-scripts/change-theme.sh
 super+F11 
 	 xbacklight -dec 5
 super+F12 
