@@ -10,11 +10,6 @@ wallpaper = {
 }
 
 
-def install_aur_programs():
-    system("git clone https://aur.archlinux.org/yay.git")
-    system("cd yay/ && makepkg -si")
-    system("yay -S python-pywalfox tor-browser onlyoffice-bin")
-
 
 def setup_pywall():
     system("cp -r pywal/* ~/.config/")
@@ -80,15 +75,13 @@ def shell():
 
 
 user_input = input(
-    "For Aur Programs:1 | For config:2 | For shell:3 | For Pywal:4 \n")
+    "For config:1 | For shell:2 | For Pywal:3 \n")
 
-if user_input == "1":
-    install_aur_programs()
-elif user_input == "2":
+elif user_input == "1":
     config_system()
-elif user_input == "3":
+elif user_input == "2":
     shell()
-elif user_input == "4":
+elif user_input == "3":
     setup_pywall()
 
 else:
