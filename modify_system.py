@@ -2,11 +2,10 @@ from os import system
 
 # Programs
 def install():  
-    system("pacman -Syu neovim fish pavucontrol python-pywal alacritty firefox pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol tlp unrar unzip vlc git base-devel")
+    system("xbps-install -Su xbps neovim fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol tlp unzip mpv git base-devel")
     print("Programs done")
-    system("systemctl start bluetooth.service")
-    system("systemctl enable bluetooth.service")
-    system("systemctl pulseaudio start")
+    system("ln -s /etc/sv/bluetoothd /var/service/")
+
 
 def edit_fstab():
     system("mkdir /code /films /important /tutorials /misc /anime")
@@ -38,12 +37,9 @@ def create_swap():
     print("Swap memory Done")
 
 
-def setup_hibernate():
-    system("sh ./hibernator")
-    system("sudo grub-mkconfig -o /boot/grub/grub.cfg")
 
 user_input = input(
-    "For Installing | For Edit fstab:2 | For Create Swap:3 | For Hibernation:4 | For Everything:5\n")
+    "For Installing | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
 
 if user_input == "1":
     install()
@@ -52,11 +48,9 @@ elif user_input == "2":
 elif user_input == "3":
     create_swap()
 elif user_input == "4":
-    setup_hibernate()
-elif user_input == "5":
     install()
     edit_fstab()
     create_swap()
-    setup_hibernate()
+
 else:
     print("Wrong input")
