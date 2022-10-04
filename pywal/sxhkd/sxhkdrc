@@ -6,7 +6,7 @@ super + n
 super + v
 	nvim
 super + b
-        firefox
+	firefox
 super + z
 	telegram-desktop
 
@@ -51,7 +51,7 @@ XF86MonBrightnessUp
 
 # program launcher (Apps)
 super + d
-	rofi -show drun -theme ayu -show-icons
+	rofi -show drun -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape

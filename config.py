@@ -13,7 +13,7 @@ wallpaper = {
 def install_aur_programs():
     system("git clone https://aur.archlinux.org/yay.git")
     system("cd yay/ && makepkg -si")
-    system("yay -S visual-studio-code-bin brave-bin onlyoffice-bin")
+    system("yay -S python-pywalfox tor-browser onlyoffice-bin")
 
 
 def setup_pywall():
@@ -21,9 +21,7 @@ def setup_pywall():
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
-    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers")
-
-
+    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers --depth=1")
 
 
 def config_system():
@@ -55,7 +53,7 @@ def config_system():
 
     # Wallpaper
     print("Please wait while we download the wallpaper")
-    system(f"git clone {wallpaper[theme]} $HOME/Pictures/")
+    system(f"git clone {wallpaper[theme]} $HOME/Pictures/wallpapers")
     print("config done")
 
 
