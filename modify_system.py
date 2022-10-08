@@ -2,7 +2,7 @@ from os import system
 
 # Programs
 def install():  
-    system("xbps-install -Su xbps neovim fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol tlp unzip mpv git base-devel")
+    system("xbps-install -Su xbps tor-browser neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol tlp unzip mpv git base-devel")
     print("Programs done")
     system("ln -s /etc/sv/bluetoothd /var/service/")
 
@@ -12,12 +12,14 @@ def edit_fstab():
     with open("/etc/fstab", "a") as fstab:
         fstab.write(
             """
-UUID=d50adcb1-f83f-4709-b55f-919af6296c3b /anime ext4 defaults,noatime 0 1
-UUID=adc2ff84-d990-4297-a2b3-045d06d35764 /code ext4 defaults,noatime 0 1
-UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
-UUID=0372a82c-5380-430f-8b8d-6e4d7dd241cd /misc ext4 defaults,noatime 0 1
+
+UUID=908d171c-d003-4a70-9ea5-2ce6267a23a9 /code btrfs defaults,noatime 0 1
+UUID=7cd2166c-e744-416c-8390-ddeb09de9d0f /misc btrfs defaults,noatime 0 1
+UUID=0423513a-e50e-4a20-9975-81640333b1d8 /tutorials btrfs defaults,noatime 0 1
+UUID=15e22881-ee5e-4ecb-819c-94454c77f8c6 /anime btrfs defaults,noatime 0 1
+
 UUID=99739e7d-2713-d801-9053-9e7d2713d801 /films ext4 defaults,noatime 0 1
-UUID=7fd4d5e2-7f1d-4e94-bbdd-fc986cae9bba /tutorials ext4 defaults,noatime 0 1
+UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
             """
         )
     system("mount -a")
