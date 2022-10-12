@@ -77,7 +77,7 @@ def shell():
 user_input = input(
     "For config:1 | For shell:2 | For Pywal:3 \n")
 
-elif user_input == "1":
+if user_input == "1":
     config_system()
 elif user_input == "2":
     shell()

@@ -17,8 +17,7 @@ UUID=908d171c-d003-4a70-9ea5-2ce6267a23a9 /code btrfs defaults,noatime 0 1
 UUID=7cd2166c-e744-416c-8390-ddeb09de9d0f /misc btrfs defaults,noatime 0 1
 UUID=0423513a-e50e-4a20-9975-81640333b1d8 /tutorials btrfs defaults,noatime 0 1
 UUID=15e22881-ee5e-4ecb-819c-94454c77f8c6 /anime btrfs defaults,noatime 0 1
-
-UUID=99739e7d-2713-d801-9053-9e7d2713d801 /films ext4 defaults,noatime 0 1
+UUID=b38d72db-f098-4323-8652-240503b93b63 /films btrfs defaults,noatime 0 1
 UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
             """
         )
@@ -26,17 +25,6 @@ UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
     print("fstab done")
 
 
-# Swap memory
-def create_swap():
-    system("swapon -s")
-    system("swapoff -a")
-    system("dd if=/dev/zero of=/swapfile bs=1M count=4096")
-    system("mkswap /swapfile")
-    system("chmod 600 /swapfile")
-    system("swapon /swapfile")
-    system("echo '/swapfile none    swap    defaults 0 0' | sudo tee -a /etc/fstab")
-    system("mount -a")
-    print("Swap memory Done")
 
 
 
@@ -48,11 +36,8 @@ if user_input == "1":
 elif user_input == "2":
     edit_fstab()
 elif user_input == "3":
-    create_swap()
-elif user_input == "4":
     install()
     edit_fstab()
-    create_swap()
 
 else:
     print("Wrong input")
