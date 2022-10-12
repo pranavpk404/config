@@ -2,13 +2,13 @@ from os import system
 
 # Programs
 def install():  
-    system("xbps-install -Su xbps tor-browser neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol tlp unzip mpv git base-devel")
+    system("pacman -Syu neovim fish pavucontrol python-pywal alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol tlp unrar unzip mpv git base-devel")
     print("Programs done")
     system("ln -s /etc/sv/bluetoothd /var/service/")
 
 
 def edit_fstab():
-    system("mkdir /code /films /important /tutorials /misc /anime")
+    system("mkdir /code /films /important /tutorials /misc")
     with open("/etc/fstab", "a") as fstab:
         fstab.write(
             """

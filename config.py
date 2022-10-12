@@ -16,7 +16,9 @@ def setup_pywall():
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
-    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers --depth=1")
+    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers")
+
+
 
 
 def config_system():
@@ -48,7 +50,7 @@ def config_system():
 
     # Wallpaper
     print("Please wait while we download the wallpaper")
-    system(f"git clone {wallpaper[theme]} $HOME/Pictures/wallpapers")
+    system(f"git clone {wallpaper[theme]} $HOME/Pictures/")
     print("config done")
 
 
@@ -77,7 +79,10 @@ def shell():
 user_input = input(
     "For config:1 | For shell:2 | For Pywal:3 \n")
 
-elif user_input == "1":
+
+if user_input == "1":
+    install_aur_programs()
+elif user_input == "2":
     config_system()
 elif user_input == "2":
     shell()
