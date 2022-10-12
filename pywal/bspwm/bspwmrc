@@ -21,6 +21,5 @@ bspc config gapless_monocle      true
 
 
 bspc rule -a Brave-browser desktop='^2'
-bspc rule -a firefox desktop='^2'
-bspc rule -a nemo desktop='^3'
+
 
