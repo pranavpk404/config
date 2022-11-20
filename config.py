@@ -13,6 +13,7 @@ wallpaper = {
 
 def setup_pywall():
     system("cp -r pywal/* ~/.config/")
+    system("cp global/mpv.py ~/.config/custom-scripts/")
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")

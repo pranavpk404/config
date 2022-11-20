@@ -2,7 +2,7 @@ from os import system
 
 # Programs
 def install():  
-    system("xbps-install -Su xbps tor-browser neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol tlp unzip mpv git base-devel")
+    system("xbps-install -Su xbps tor-browser python3-tkinter python3 neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol unzip mpv git base-devel")
     print("Programs done")
     system("ln -s /etc/sv/bluetoothd /var/service/")
 
@@ -29,7 +29,7 @@ UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
 
 
 user_input = input(
-    "For Installing | For Edit fstab:2 | For Create Swap:3 | For Everything:4\n")
+    "For Installing | For Edit fstab:2 | For Everything:3\n")
 
 if user_input == "1":
     install()
