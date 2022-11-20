@@ -2,6 +2,7 @@ from os import system
 
 # Programs
 def install():  
+    system("mv xbps.d /etc/xbps.d")
     system("xbps-install -Su xbps tor-browser python3-tkinter python3 neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol unzip mpv git base-devel")
     print("Programs done")
     system("ln -s /etc/sv/bluetoothd /var/service/")
