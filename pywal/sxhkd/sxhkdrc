@@ -1,65 +1,68 @@
-# Keyboard Shortcuts
+# Apps
 super + Return
 	alacritty
 super + n
 	nemo
-super + v
-	nvim
 super + b
 	firefox
 super + z
 	telegram-desktop
 
 
-
+# Function Keys
 super+F1:
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
+	firefox https://zoro.to/watch/one-piece-100
 super+F2:
-	pactl set-sink-volume @DEFAULT_SINK@ -10%
+	python ~/.config/custom-scripts/download_wallpaper.py -s wallpaper
 super+F3:
-	pactl set-sink-volume @DEFAULT_SINK@ +10%
-
-super+F5:
-	bluetoothctl power on && bluetoothctl  connect 11:11:22:AC:8D:70
-
+	
 super+F4:
-         bash ~/.config/custom-scripts/change-theme.sh
-super+F11 
-	 xbacklight -dec 5
-super+F12 
-	 xbacklight -inc 5
-Print 
-	flameshot gui -c -p ~/Screenshots
-super+Print
-	flameshot full -c -p ~/Screenshots
+    bash ~/.config/custom-scripts/change-theme.sh
+super+F5:
+	bluetoothctl power on && bluetoothctl connect 00:00:AB:CD:45:45 
+	
+super+F6:
+	
+super+F7:
+
+super+F8:
+	
+super+F9:
+
+super+F10:
+	
+super+F11:
+	
+super+F12:
 
 
-
+# Laptop Keys
 XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -10%
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 XF86MonBrightnessDown
-	sudo xbacklight -dec 5
+	xbacklight -dec 5
 XF86MonBrightnessUp
-	sudo xbacklight -inc 5
+	xbacklight -inc 5
 
+
+Print 
+	flameshot gui -c -p ~/Screenshots
+super+Print
+	flameshot full -c -p ~/Screenshots
 
 
 # program launcher (Apps)
 super + d
-	rofi -show drun -show-icons
+	rofi -show drun -show-icons 
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
 
 # quit/restart bspwm
 super + alt + {q,r}
