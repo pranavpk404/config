@@ -17,7 +17,7 @@ def setup_pywall():
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
-    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers --depth=1")
+    system("python ~/.config/custom-scripts/download_wallpaper.py")
 
 
 def config_system():
