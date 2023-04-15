@@ -13,12 +13,11 @@ wallpaper = {
 
 def setup_pywall():
     system("cp -r pywal/* ~/.config/")
+    system("cp global/mpv.py ~/.config/custom-scripts/")
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
-    system("git clone https://github.com/pranavpk404/wallpapers $HOME/Pictures/wallpapers")
-
-
+    system("python ~/.config/custom-scripts/download_wallpaper.py")
 
 
 def config_system():
@@ -50,7 +49,7 @@ def config_system():
 
     # Wallpaper
     print("Please wait while we download the wallpaper")
-    system(f"git clone {wallpaper[theme]} $HOME/Pictures/")
+    system(f"git clone {wallpaper[theme]} $HOME/Pictures/wallpapers")
     print("config done")
 
 
@@ -79,10 +78,7 @@ def shell():
 user_input = input(
     "For config:1 | For shell:2 | For Pywal:3 \n")
 
-
 if user_input == "1":
-    install_aur_programs()
-elif user_input == "2":
     config_system()
 elif user_input == "2":
     shell()
