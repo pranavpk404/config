@@ -16,31 +16,31 @@ font:
   bold_italic:
     family: JetBrains Mono
     style: Bold Italic
-  size: 11
+  size: 11 
 # BEGIN ACE
 colors:
   primary:
-    background: '#0F0F12'
-    foreground: '#b0bcc9'
+    background: '#07111A'
+    foreground: '#8fd0cc'
   cursor:
-    text:       '#0F0F12'
-    cursor:     '#b0bcc9'
+    text:       '#07111A'
+    cursor:     '#8fd0cc'
   normal:
-    black:      '#0F0F12'
-    red:        '#585B5D'
-    green:      '#48576A'
-    yellow:     '#AA6548'
-    blue:       '#D49B6A'
-    magenta:    '#5A7192'
-    cyan:       '#847D85'
-    white:      '#b0bcc9'
+    black:      '#07111A'
+    red:        '#085E94'
+    green:      '#36419A'
+    yellow:     '#0472B0'
+    blue:       '#C651AB'
+    magenta:    '#0C9A9B'
+    cyan:       '#058AB4'
+    white:      '#8fd0cc'
   bright:
-    black:      '#7b838c'
-    red:        '#585B5D'
-    green:      '#48576A'
-    yellow:     '#AA6548'
-    blue:       '#D49B6A'
-    magenta:    '#5A7192'
-    cyan:       '#847D85'
-    white:      '#b0bcc9'
+    black:      '#64918e'
+    red:        '#085E94'
+    green:      '#36419A'
+    yellow:     '#0472B0'
+    blue:       '#C651AB'
+    magenta:    '#0C9A9B'
+    cyan:       '#058AB4'
+    white:      '#8fd0cc'
 # END ACE

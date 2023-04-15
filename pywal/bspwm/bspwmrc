@@ -3,12 +3,9 @@
 #pgrep -x sxhkd > /dev/null || sxhkd &
 sxhkd &
 nm-applet &
-
-bash ~/.config/polybar/scripts/pywal.sh /home/pranav/Pictures/wallpapers/ &&
-bash ~/.config/custom-scripts/alacritty/generate-theme.sh &&
-bash ~/.config/custom-scripts/brave/generate-theme.sh &&
-bash ~/.config/polybar/launch.sh &&
-
+dunst &
+xrandr --output HDMI1 --left-of eDP1 &
+bash ~/.config/custom-scripts/change-theme.sh &
 bspc monitor -d I II III IV V
 
 
@@ -18,8 +15,5 @@ bspc config window_gap          10
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-
-
-bspc rule -a Brave-browser desktop='^2'
 
 
