@@ -2,8 +2,8 @@ from os import system
 
 # Programs
 def install():  
-    system("mv xbps.d /etc/xbps.d")
-    system("xbps-install -Su xbps torbrowser-launcher dunst neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol unzip mpv git base-devel")
+    system("mv xbps.d /etc/")
+    system("xbps-install -Syu xrdb xbacklight dunst polkit-devel polkit-elogind elogind lxappearance python3-pip libreoffice-calc xbps torbrowser-launcher dunst neovim bspwm polybar sxhkd rofi fish-shell pavucontrol pywal alacritty firefox pulseaudio blueman feh flameshot gvfs-mtp btop mtpfs nemo nodejs noto-fonts-emoji pavucontrol unzip mpv git base-devel")
     print("Programs done")
     system("ln -s /etc/sv/bluetoothd /var/service/")
 

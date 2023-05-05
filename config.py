@@ -73,10 +73,11 @@ def shell():
         system("cp -r global/fish/ $HOME/.config")
         print("please run \"sudo pacman -Rns zsh\" if not using zsh")
         print("fish done")
-
+def python_dep():
+    system("pip install pywalfox colorama requests fake-useragents")
 
 user_input = input(
-    "For config:1 | For shell:2 | For Pywal:3 \n")
+        "For config:1 | For shell:2 | For Pywal:3 | For Python Deps:4 \n")
 
 if user_input == "1":
     config_system()
@@ -84,6 +85,7 @@ elif user_input == "2":
     shell()
 elif user_input == "3":
     setup_pywall()
-
+elif user_input == "4":
+    python_dep()
 else:
     print("Please enter correct option")
