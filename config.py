@@ -19,7 +19,13 @@ def setup_pywall():
     system("cp -r global/flameshot ~/.config/")
     system("python ~/.config/custom-scripts/download_wallpaper.py")
 
+def yay():
+    system("https://github.com/Jguer/yay")
+    system("cd yay")
+    system("makepkg -si")
 
+def aur_packages():
+    system("yay -S brave-bin visual-studio-code-bin mongodb-bin mongodb-compass mongosh-bin")
 def config_system():
     theme_input = input(
         "For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 | For Ayu:6 || Default is Ayu\n")

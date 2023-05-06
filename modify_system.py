@@ -4,7 +4,6 @@ from os import system
 def install():  
     system("pacman -Syu neovim fish pavucontrol python-pywal alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol tlp unrar unzip mpv git base-devel")
     print("Programs done")
-    system("ln -s /etc/sv/bluetoothd /var/service/")
 
 
 def edit_fstab():
@@ -12,14 +11,10 @@ def edit_fstab():
     with open("/etc/fstab", "a") as fstab:
         fstab.write(
             """
-
 UUID=908d171c-d003-4a70-9ea5-2ce6267a23a9 /code btrfs defaults,noatime 0 1
 UUID=7cd2166c-e744-416c-8390-ddeb09de9d0f /misc btrfs defaults,noatime 0 1
 UUID=0423513a-e50e-4a20-9975-81640333b1d8 /tutorials btrfs defaults,noatime 0 1
-UUID=15e22881-ee5e-4ecb-819c-94454c77f8c6 /anime btrfs defaults,noatime 0 1
-
-UUID=99739e7d-2713-d801-9053-9e7d2713d801 /films ext4 defaults,noatime 0 1
-UUID=01D806FA07C373F0 /important ntfs defaults,noatime 0 1
+UUID=b38d72db-f098-4323-8652-240503b93b63 /films btrfs defaults,noatime 0 1
             """
         )
     system("mount -a")
