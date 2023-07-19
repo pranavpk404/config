@@ -1,20 +1,22 @@
 from os import system
 
 # Programs
-def install():  
-    system("pacman -Syu neovim fish pavucontrol python-pywal alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol tlp unrar unzip mpv git base-devel")
+def install():
+    system("cp global/pacman.conf /etc/pacman.conf")
+    system("pacman -S artix-archlinux-support")
+    system("pacman-key --populate archlinux")
+    system("pacman -Syu ffmpeg ffmpeg4.4 xf86-input-synaptics torbrowser-launcher xorg-xbacklight lxappearance fzf telegram-desktop firefox neovim fish pavucontrol python-pywal alacritty pulseaudio pulseaudio-bluetooth blueman bluez bluez-utils feh flameshot gvfs-mtp btop mtpfs nemo nodejs npm noto-fonts-emoji noto-fonts pavucontrol tlp unrar unzip mpv git base-devel")
     print("Programs done")
 
 
 def edit_fstab():
-    system("mkdir /code /films /important /tutorials /misc")
+    system("mkdir /code /films /misc")
     with open("/etc/fstab", "a") as fstab:
         fstab.write(
             """
-UUID=908d171c-d003-4a70-9ea5-2ce6267a23a9 /code btrfs defaults,noatime 0 1
-UUID=7cd2166c-e744-416c-8390-ddeb09de9d0f /misc btrfs defaults,noatime 0 1
-UUID=0423513a-e50e-4a20-9975-81640333b1d8 /tutorials btrfs defaults,noatime 0 1
-UUID=b38d72db-f098-4323-8652-240503b93b63 /films btrfs defaults,noatime 0 1
+            UUID=09623b5a-e8e9-4741-91ed-7be4cb21d51a /films ext4 defaults,noatime 0 1
+UUID=ae9107a9-8577-46f4-8d24-049005d88bed /misc ext4 defaults,noatime 0 1
+UUID=651cd300-434e-4e80-80fa-9e964a330c8b /code ext4 defaults,noatime 0 1
             """
         )
     system("mount -a")
