@@ -11,12 +11,13 @@ wallpaper = {
 
 
 
-def setup_pywall():
+def setup_pywal():
     system("cp -r pywal/* ~/.config/")
     system("cp global/mpv.py ~/.config/custom-scripts/")
     system("mkdir $HOME/.local/share/fonts")
     system("cp -r global/fonts/* $HOME/.local/share/fonts")
     system("cp -r global/flameshot ~/.config/")
+    system("pip install fake-useragents colorama requests")
     system("python ~/.config/custom-scripts/download_wallpaper.py")
 
 def yay():
@@ -28,7 +29,7 @@ def aur_packages():
     system("yay -S brave-bin visual-studio-code-bin mongodb-bin mongodb-compass mongosh-bin")
 def config_system():
     theme_input = input(
-        "For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 | For Ayu:6 || Default is Ayu\n")
+            "For Catppuccin:1 | For Gruvbox:2 | For Nord:3 | For Rose Pine:4 | For Dracula:5 | For Ayu:6 || For Black & White:7 || Default is Ayu\n")
     if theme_input == "1":
         theme = "catppuccin"
     elif theme_input == "2":
@@ -41,6 +42,8 @@ def config_system():
         theme = "dracula"
     elif theme_input == "6":
         theme = "ayu"
+    elif theme_input == "7":
+        theme: = "bw"
     else:
         theme = "ayu"
      
